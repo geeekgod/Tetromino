@@ -9,3 +9,11 @@ git clone https://github.com/thisisrishabh22/Tetromino.git
 
 cd Tetromino
 ```
+
+## Usage
+
+```bash
+yarn install
+
+yarn start
+```
