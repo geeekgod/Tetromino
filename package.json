@@ -1,6 +1,10 @@
 {
   "name": "tetromino",
   "version": "0.1.0",
+  "author": {
+    "name": "Rishabh Singh",
+    "email": "ris8645208@gmail.com"
+  },
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
