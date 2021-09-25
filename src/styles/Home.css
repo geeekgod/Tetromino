@@ -7,6 +7,9 @@
   list-style: none;
   scroll-behavior: smooth;
 }
+img {
+  scroll-behavior: smooth;
+}
 body {
   background: linear-gradient(#2b1055, #7597de);
   min-height: 100vh;
