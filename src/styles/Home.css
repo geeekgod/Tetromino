@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+body {
+  background: linear-gradient(#2b1055, #7597de);
+  min-height: 100vh;
+}
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 100px;
+  z-index: 10000;
+}
+header .logo {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 5px;
+  text-transform: capitalize;
+}
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul li {
+  margin-left: 2rem;
+}
+header ul li a {
+  color: white;
+  letter-spacing: 5px;
+  padding: 5px 16px;
+}
+header ul li a:hover,
+header ul li a.active {
+  background: hsla(0, 0%, 100%, 0.4);
+  color: #2b1055;
+  font-weight: 700;
+  border-radius: 2pc;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 130vh;
+  padding: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+section::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #1c0522, transparent);
+  z-index: 1000;
+}
+section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+section img#moon {
+  /* object-fit:contain; */
+  mix-blend-mode: screen;
+}
+#text {
+  position: absolute;
+  color: #fff;
+  white-space: nowrap;
+  font-size: 4rem;
+  z-index: 9;
+}
+section img#mountains_front {
+  z-index: 10;
+  top: 25px;
+  height: 100%;
+  /*  for text to be behind 
+z-index:10 */
+}
+#btn {
+  text-decoration: none;
+  padding: 8px 30px;
+  border-radius: 40px;
+  background: hsla(0, 0%, 100%, 0.8);
+  color: #2b1055;
+  font-size: 1.5em;
+  display: inline-block;
+  z-index: 9;
+  transform: translateY(100px);
+}
+
+.sec {
+  position: relative;
+  padding: 100px;
+  background: #1c0522;
+  z-index: 9;
+}
+.sec h2 {
+  font-size: 3.5em;
+  margin-bottom: 10px;
+  /* margin-top:2rem; */
+  color: #fff;
+}
+.sec p {
+  font-size: 1em;
+
+  color: #fff;
+}
