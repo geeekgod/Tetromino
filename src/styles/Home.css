@@ -84,6 +84,9 @@ section img#moon {
   /* object-fit:contain; */
   mix-blend-mode: screen;
 }
+section img#mountains_behind{
+  transform: translateY(-50px);
+}
 #text {
   position: absolute;
   color: #fff;
