@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Pixel';
+    src: url("../font/Pixel-LCD-7.woff");
+  }
+  body {
+    margin: 0;
+    font-family: 'Pixel';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
