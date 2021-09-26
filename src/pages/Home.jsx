@@ -4,6 +4,7 @@ import starsImg from '../img/stars.png'
 import moonImg from '../img/moon.png'
 import mountainBehindImg from '../img/mountains_behind.png'
 import mountainFrontImg from '../img/mountains_front.png'
+import { Link } from 'react-router-dom';
 
 const Home = () => {
 
@@ -34,7 +35,7 @@ const Home = () => {
                 <img src={moonImg} alt="" id="moon" style={{ top: scrollValue * 1.05 + 'px' }} />
                 <img src={mountainBehindImg} alt="" id="mountains_behind" style={{ top: scrollValue * 0.5 + 'px' }} />
                 <h2 id="text" style={{ marginRight: scrollValue * 4 + 'px', marginTop: scrollValue * 1.5 + 'px' }}>Tetromino</h2>
-                <a href="#" id="btn" style={{ marginTop: scrollValue * 1.5 + 'px' }}>PLAY NOW</a>
+                <Link to="/play" id="btn" style={{ marginTop: scrollValue * 1.5 + 'px' }}>PLAY NOW</Link>
                 <img src={mountainFrontImg} alt="" id="mountains_front" style={{ top: scrollValue * 0 + 'px' }} />
             </section>
             <div className="sec">
