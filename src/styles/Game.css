@@ -1,11 +1,17 @@
 @font-face {
-    font-family: 'Pixel';
-    src: url("../font/Pixel-LCD-7.woff");
+  font-family: "Pixel";
+  src: url("../font/Pixel-LCD-7.woff");
+}
+body {
+  margin: 0;
+  font-family: "Pixel";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 500px) {
+  .stage-div {
+    grid-template-rows: repeat(20, calc(45vw / 12)) !important;
+    max-width: 45vw !important;
   }
-  body {
-    margin: 0;
-    font-family: 'Pixel';
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
+}
