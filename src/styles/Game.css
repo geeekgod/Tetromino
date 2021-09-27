@@ -17,6 +17,14 @@ body {
   justify-content: space-evenly;
 }
 
+.mobile-controls p{
+  padding: 17px;
+  background: rgb(25, 5, 34);
+  color: #fff;
+  user-select: none;
+  border-radius: 15px;
+}
+
 @media (max-width: 500px) {
   .stage-div {
     grid-template-rows: repeat(20, calc(45vw / 12)) !important;
