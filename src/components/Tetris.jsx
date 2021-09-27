@@ -101,6 +101,14 @@ const Tetris = () => {
                         <StartButton callBack={startGame} />
                     </aside>
                 </StyledTetris>
+                <div className="mobile-controls">
+                    <div className="controls-wrapp">
+                        <p>rotate</p>
+                        <p>left</p>
+                        <p>right</p>
+                        <p>down</p>
+                    </div>
+                </div>
             </StyledTetrisWrapper>
         </div>
     )

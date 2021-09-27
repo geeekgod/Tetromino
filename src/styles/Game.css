@@ -8,10 +8,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.mobile-controls{
+  display: none;
+}
 
 @media (max-width: 500px) {
   .stage-div {
     grid-template-rows: repeat(20, calc(45vw / 12)) !important;
     max-width: 45vw !important;
+  }
+}
+
+@media (max-width: 501px) {
+  .mobile-controls {
+    display: block;
   }
 }
