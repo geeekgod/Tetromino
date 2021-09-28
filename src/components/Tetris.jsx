@@ -103,22 +103,22 @@ const Tetris = () => {
                 </StyledTetris>
                 <div className="mobile-controls">
                     <div className="controls-wrapper">
-                        <i className="fas fa-arrow-up" onTouchStart={() => {
+                        <i className="fas fa-undo" onTouchStart={() => {
                             if (!gameOver) { playerRotate(stage, 1) }
                         }}></i>
                     </div>
                     <div className="controls-wrapper">
-                        <i className="fas fa-arrow-left" onTouchStart={() => {
+                        <i className="fas fa-chevron-left" onTouchStart={() => {
                             if (!gameOver) { movePlayer(-1) }
                         }}></i>
-                        <i className="fas fa-arrow-down" onTouchStart={() => {
+                        <i className="fas fa-chevron-down" onTouchStart={() => {
                             if (!gameOver) { dropPlayer() }
                         }} onTouchEnd={() => {
                             if (!gameOver) {
                                 setDropTime(1000 / (level + 1) + 200);
                             }
                         }}></i>
-                        <i className="fas fa-arrow-right" onTouchStart={() => {
+                        <i className="fas fa-chevron-right" onTouchStart={() => {
                             if (!gameOver) { movePlayer(1) }
                         }}></i>
                     </div>
