@@ -80,29 +80,6 @@ const Tetris = () => {
         }
     }
 
-    // const moveOnMobile = (control) => {
-    //     if (!gameOver) {
-    //         switch (control) {
-    //             case "rotate":
-    //                 playerRotate(stage, 1);
-    //             case "left":
-    //                 movePlayer(-1);
-    //             case "right":
-    //                 movePlayer(1);
-    //             case "down":
-    //                 dropPlayer();
-    //         }
-    //     }
-    // }
-
-    // const mobileTouchUp = (control) => {
-    //     if (!gameOver) {
-    //         if (control === "down") {
-    //             setDropTime(1000 / (level + 1) + 200);
-    //         }
-    //     }
-    // }
-
     useInterval(() => {
         drop()
     }, dropTime)
