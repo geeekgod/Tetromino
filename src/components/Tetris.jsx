@@ -80,29 +80,6 @@ const Tetris = () => {
         }
     }
 
-    // const moveOnMobile = (control) => {
-    //     if (!gameOver) {
-    //         switch (control) {
-    //             case "rotate":
-    //                 playerRotate(stage, 1);
-    //             case "left":
-    //                 movePlayer(-1);
-    //             case "right":
-    //                 movePlayer(1);
-    //             case "down":
-    //                 dropPlayer();
-    //         }
-    //     }
-    // }
-
-    // const mobileTouchUp = (control) => {
-    //     if (!gameOver) {
-    //         if (control === "down") {
-    //             setDropTime(1000 / (level + 1) + 200);
-    //         }
-    //     }
-    // }
-
     useInterval(() => {
         drop()
     }, dropTime)
@@ -126,22 +103,24 @@ const Tetris = () => {
                 </StyledTetris>
                 <div className="mobile-controls">
                     <div className="controls-wrapper">
-                        <p onTouchStart={() => {
+                        <i className="fas fa-arrow-up" onTouchStart={() => {
                             if (!gameOver) { playerRotate(stage, 1) }
-                        }}>rotate</p>
-                        <p onTouchStart={() => {
+                        }}></i>
+                    </div>
+                    <div className="controls-wrapper">
+                        <i className="fas fa-arrow-left" onTouchStart={() => {
                             if (!gameOver) { movePlayer(-1) }
-                        }}>left</p>
-                        <p onTouchStart={() => {
-                            if (!gameOver) { movePlayer(1) }
-                        }}>right</p>
-                        <p onTouchStart={() => {
+                        }}></i>
+                        <i className="fas fa-arrow-down" onTouchStart={() => {
                             if (!gameOver) { dropPlayer() }
                         }} onTouchEnd={() => {
                             if (!gameOver) {
                                 setDropTime(1000 / (level + 1) + 200);
                             }
-                        }}>down</p>
+                        }}></i>
+                        <i className="fas fa-arrow-right" onTouchStart={() => {
+                            if (!gameOver) { movePlayer(1) }
+                        }}></i>
                     </div>
                 </div>
             </StyledTetrisWrapper>
