@@ -14,15 +14,18 @@ body {
 }
 .controls-wrapper {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
-.mobile-controls p{
+.mobile-controls i{
   padding: 17px;
   background: rgb(25, 5, 34);
   color: #fff;
   user-select: none;
   border-radius: 15px;
+  min-width: 90px;
+  text-align: center;
+  font-size: 20px;
 }
 
 @media (max-width: 500px) {
