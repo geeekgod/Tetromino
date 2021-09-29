@@ -1,16 +1,21 @@
 import React, { useEffect } from 'react'
+import Loader from '../components/Loader';
 import Tetris from '../components/Tetris'
 import '../styles/Game.css'
 
 const Game = () => {
-
-    useEffect(()=>{
+    const [loader, setLoader] = React.useState(false);
+    useEffect(() => {
+        setLoader(false);
         document.title = "Play Game | Tetromino"
-    },[]);
+        setInterval(() => {
+            setLoader(true);
+        }, 3000);
+    }, []);
 
     return (
         <div>
-            <Tetris/>
+            {loader ? (<Tetris />) : (<Loader />)}
         </div>
     )
 }
