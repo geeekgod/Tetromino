@@ -11,7 +11,8 @@ img {
   scroll-behavior: smooth;
 }
 body {
-  background: linear-gradient(#2b1055, #7597de);
+  background: url("../img/stars.png"), linear-gradient(#2b1055, #7597de);
+  background-size: cover;
   min-height: 100vh;
 }
 header {
@@ -84,7 +85,7 @@ section img#moon {
   /* object-fit:contain; */
   mix-blend-mode: screen;
 }
-section img#mountains_behind{
+section img#mountains_behind {
   transform: translateY(-50px);
 }
 #text {
