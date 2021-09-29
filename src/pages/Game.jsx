@@ -10,7 +10,7 @@ const Game = () => {
         document.title = "Play Game | Tetromino"
         setInterval(() => {
             setLoader(true);
-        }, 3000);
+        }, 2000);
     }, []);
 
     return (

@@ -5,8 +5,9 @@ import moonImg from '../img/moon.png'
 import mountainBehindImg from '../img/mountains_behind.png'
 import mountainFrontImg from '../img/mountains_front.png'
 import { Link } from 'react-router-dom';
+import Loader from '../components/Loader';
 
-const Home = () => {
+const HomeWrapper = () => {
 
     const [scrollValue, setScrollValue] = useState();
 
@@ -51,6 +52,23 @@ const Home = () => {
                 </p>
             </div>
         </>
+    )
+}
+
+const Home = () => {
+    const [loader, setLoader] = React.useState(false);
+    useEffect(() => {
+        setLoader(false);
+        document.title = "Tetromino"
+        setInterval(() => {
+            setLoader(true);
+        }, 2000);
+    }, []);
+
+    return (
+        <div>
+            {loader ? (<HomeWrapper />) : (<Loader />)}
+        </div>
     )
 }
 
