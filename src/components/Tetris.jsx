@@ -12,6 +12,7 @@ import { useGameStatus } from '../hooks/useGameStatus';
 const Tetris = () => {
     const [dropTime, setDropTime] = useState(null);
     const [gameOver, setGameOver] = useState(false);
+    const [gameStart, setGameStart] = useState(false);
 
     const [player, updatePlayerPos, resetPlayer, playerRotate] = usePlayer();
     const [stage, setStage, rowsCleared] = useStage(player, resetPlayer);
@@ -28,6 +29,7 @@ const Tetris = () => {
         setStage(createStage());
         resetPlayer();
         setGameOver(false);
+        setGameStart(true);
         setScore(0);
         setRows(0);
         setLevel(0);
@@ -98,7 +100,7 @@ const Tetris = () => {
                                 <Display text={`Rows: ${rows}`} />
                                 <Display text={`Level: ${level}`} />
                             </div>}
-                        <StartButton callBack={startGame} />
+                        <StartButton gameStart={gameStart} callBack={startGame} />
                     </aside>
                 </StyledTetris>
                 <div className="mobile-controls">
