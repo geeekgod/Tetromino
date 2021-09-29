@@ -10,21 +10,27 @@ import Loader from '../components/Loader';
 const HomeWrapper = () => {
 
     const [scrollValue, setScrollValue] = useState();
-
+    const [toggleClick, setToggleClick] = useState(false);
     useEffect(() => {
+        setToggleClick(false);
         let value = 0;
         window.addEventListener('scroll', () => {
             value = window.scrollY;
             setScrollValue(value);
             console.log(scrollValue);
         })
-    }, [scrollValue])
+    }, [scrollValue]);
+
+    const toggleMenuClick = () => {
+        setToggleClick(!toggleClick);
+    }
 
     return (
         <>
-            <header >
+            <header id="header">
                 <a href="#home" className="logo">tetromino</a>
-                <ul>
+                <div class={toggleClick ? "toggle active" : "toggle"} onClick={toggleMenuClick}></div>
+                <ul className={toggleClick ? "navigation active" : "navigation"}>
                     <li><a href="#home" className="active">HOME</a></li>
                     <li><a href="#about">ABOUT</a></li>
                     <li><a href="#contact">CONTACT</a></li>
