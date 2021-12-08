@@ -77,7 +77,7 @@ const HomeWrapper = () => {
           Tetromino
         </h2>
         <Link
-          to="/play"
+          to="/instructions"
           id="btn"
           style={{ marginTop: scrollValue * 1.5 + "px" }}
         >
@@ -135,4 +135,4 @@ const Home = () => {
   return <div>{loader ? <HomeWrapper /> : <Loader />}</div>;
 };
 
-export default React.memo(Home);
+export default Home;

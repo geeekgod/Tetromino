@@ -508,7 +508,6 @@ input[type="radio"]{
 
 /* instructions */
 .headin-instructions{
-  margin-top: 4rem;
   margin-bottom: 4rem;
   color: #fff;
 }
@@ -542,6 +541,7 @@ input[type="radio"]{
   align-items: center;
   width:100%;
   transition: 1s;
+  flex-direction: column;
 }
 .container-instructions .main-card-instructions .cards-instructions{
   width: 60%;
@@ -596,8 +596,7 @@ input[type="radio"]{
     padding:0 15px 15px 25px;
 
   }
-  .fas.fa-chevron-left,.fas.fa-chevron-right,
-  .fas.fa-chevron-down,.fas.fa-chevron-up{
+  .instruction-icons{
     padding: 10px;
     background-color: hsla(0, 0%, 100%,.6);
     color: #1c0522;
