@@ -527,7 +527,7 @@ input[type="radio"] {
 /* MEDIA QUERY */
 @media (max-width: 600px) {
   .container-instructions .main-card-instructions .cards-instructions {
-    width: 100%;
+    width: 90%;
   }
 }
 @media (max-width: 670px) {
@@ -543,10 +543,10 @@ input[type="radio"] {
 @media (max-width: 450px) {
   .content-instructions ul li {
     padding: 0 5px 8px 11px;
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
   .content-instructions h4 {
     padding: 0 5px 8px 11px;
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
 }
