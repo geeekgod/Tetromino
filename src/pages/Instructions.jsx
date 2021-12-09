@@ -1,46 +1,38 @@
 import React, { memo, useEffect } from "react";
-import { useHistory, useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import Loader from "../components/Loader";
 
 const InstructionsWrapper = memo(() => {
-  const history = useHistory();
-  const location = useLocation();
-  useEffect(() => {
-    console.log(location);
-    if (location.pathname === "/instructions") {
-      setTimeout(() => {
-        history.push("/play");
-      }, 8500);
-    }
-  }, [history]);
-
   return (
-    <div class="top-container-instructions">
-      <div class="container-instructions">
-        <h1 class="headin-instructions">
+    <div className="top-container-instructions">
+      <div className="container-instructions">
+        <h1 className="headin-instructions">
           <span> INSTRUCTIONS </span>
         </h1>
-        <div class="main-card-instructions">
-          <div class="cards-instructions ">
-            <div class="card-instructions   ">
-              <div class="content-instructions">
+        <div className="main-card-instructions">
+          <div className="cards-instructions ">
+            <div className="card-instructions   ">
+              <div className="content-instructions">
                 <ul>
                   <li>
-                    Press <i class="fas fa-chevron-left instruction-icons"></i>{" "}
+                    Press{" "}
+                    <i className="fas fa-chevron-left instruction-icons"></i>{" "}
                     key to move tetromino Left.
                   </li>
                   <li>
-                    Press <i class="fas fa-chevron-right instruction-icons"></i>{" "}
+                    Press{" "}
+                    <i className="fas fa-chevron-right instruction-icons"></i>{" "}
                     key to move tetromino Right.
                   </li>
                   <li>
-                    Press <i class="fas fa-chevron-down instruction-icons"></i>{" "}
+                    Press{" "}
+                    <i className="fas fa-chevron-down instruction-icons"></i>{" "}
                     key to move tetromino Down.
                   </li>
                   <li>
-                    Press <i class="fas fa-chevron-up instruction-icons"></i>{" "}
-                    key to Rotate the tetromino.
+                    Press{" "}
+                    <i className="fas fa-chevron-up instruction-icons"></i> key
+                    to Rotate the tetromino.
                   </li>
                 </ul>
                 <h4>GAME TIP: Hold Down key to move tetromino fall fast.</h4>
