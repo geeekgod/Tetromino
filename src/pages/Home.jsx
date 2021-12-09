@@ -4,8 +4,9 @@ import starsImg from "../img/stars.png";
 import moonImg from "../img/moon.png";
 import mountainBehindImg from "../img/mountains_behind.png";
 import mountainFrontImg from "../img/mountains_front.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Loader from "../components/Loader";
+import Navbar from "../components/Navbar";
 
 const HomeWrapper = () => {
   const [scrollValue, setScrollValue] = useState();
@@ -16,7 +17,6 @@ const HomeWrapper = () => {
     window.addEventListener("scroll", () => {
       value = window.scrollY;
       setScrollValue(value);
-      console.log(scrollValue);
     });
   }, [scrollValue]);
 
@@ -24,19 +24,26 @@ const HomeWrapper = () => {
     setToggleClick(!toggleClick);
   };
 
+  const location = useLocation();
   return (
     <>
-      <header id="header" style={{ top: scrollValue * 0.5 + "px" }}>
+      <Navbar
+        toggleClick={toggleClick}
+        toggleMenuClick={toggleMenuClick}
+        location={location}
+        scrollValue={scrollValue}
+      />
+      {/* <header id="header" style={{ top: scrollValue * 0.5 + "px" }}>
         <a href="#home" className="logo">
           tetromino
         </a>
         <div
-          class={toggleClick ? "toggle active" : "toggle"}
+          className={toggleClick ? "toggle active" : "toggle"}
           onClick={toggleMenuClick}
         ></div>
         <ul className={toggleClick ? "navigation active" : "navigation"}>
           <li>
-            <a href="#" class="active">
+            <a href="#" className="active">
               HOME
             </a>
           </li>
@@ -47,7 +54,7 @@ const HomeWrapper = () => {
             <Link to="/about-us">ABOUT US</Link>
           </li>
         </ul>
-      </header>
+      </header> */}
       <section className="images">
         <img
           src={starsImg}
@@ -93,20 +100,20 @@ const HomeWrapper = () => {
       <div
         id="about-game"
         style={{ display: "flex", justifyContent: "center" }}
-        class="sec"
+        className="sec"
       >
-        <div class="container">
-          <div class="row wrapper">
-            <h1 class="head">
+        <div className="container">
+          <div className="row wrapper">
+            <h1 className="head">
               <span> ABOUT GAME </span>
             </h1>
-            <p class="lead">
+            <p className="lead">
               By embracing our universal desire to create order out of chaos,
               the Tetromino game provides intellectual sport that combines
               continuous fun with mental stimulation.
             </p>
             <br />
-            <p class="lead">
+            <p className="lead">
               The Tetromino game requires players to strategically rotate, move,
               and drop a procession of blocks that fall into the rectangular
               Matrix at increasing speeds. Players attempt to clear as many
