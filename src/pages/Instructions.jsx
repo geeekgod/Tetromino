@@ -64,7 +64,7 @@ const Instructions = () => {
   const [loader, setLoader] = React.useState(false);
   useEffect(() => {
     setLoader(false);
-    document.title = "Tetromino";
+    document.title = "Instructions | Tetromino";
     setInterval(() => {
       setLoader(true);
     }, 2000);
