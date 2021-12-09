@@ -7,20 +7,20 @@ import Loader from "../components/Loader";
 import Navbar from "../components/Navbar";
 
 const AboutUsWrapper = memo(() => {
-    const [scrollValue, setScrollValue] = useState();
-    const [toggleClick, setToggleClick] = useState(false);
-    useEffect(() => {
-      setToggleClick(false);
-      let value = 0;
-      window.addEventListener("scroll", () => {
-        value = window.scrollY;
-        setScrollValue(value);
-      });
-    }, [scrollValue]);
-  
-    const toggleMenuClick = () => {
-      setToggleClick(!toggleClick);
-    };
+  const [scrollValue, setScrollValue] = useState();
+  const [toggleClick, setToggleClick] = useState(false);
+  useEffect(() => {
+    setToggleClick(false);
+    let value = 0;
+    window.addEventListener("scroll", () => {
+      value = window.scrollY;
+      setScrollValue(value);
+    });
+  }, [scrollValue]);
+
+  const toggleMenuClick = () => {
+    setToggleClick(!toggleClick);
+  };
   const location = useLocation();
   return (
     <div>
@@ -29,28 +29,6 @@ const AboutUsWrapper = memo(() => {
         toggleMenuClick={toggleMenuClick}
         location={location}
       />
-      {/* <header id="header">
-        <a href="#home" className="logo">
-          tetromino
-        </a>
-        <div
-          className={toggleClick ? "toggle active" : "toggle"}
-          onClick={toggleMenuClick}
-        ></div>
-        <ul className={toggleClick ? "navigation active" : "navigation"}>
-          <li>
-            <a href="#" className="active">
-              HOME
-            </a>
-          </li>
-          <li>
-            <a href="#about-game">ABOUT GAME</a>
-          </li>
-          <li>
-            <Link to="/about-us">ABOUT US</Link>
-          </li>
-        </ul>
-      </header> */}
       <div className="top-container">
         <div className="container">
           <h1 className="headin">
@@ -61,7 +39,11 @@ const AboutUsWrapper = memo(() => {
               <div className="card">
                 <div className="content">
                   <div className="img">
-                    <img src={rishabhImg} alt="" draggable={false} />
+                    <img
+                      src={rishabhImg}
+                      alt="Rishabh Singh Full-Stack developer"
+                      draggable={false}
+                    />
                   </div>
                   <div className="details">
                     <div className="name">Rishabhkumar Singh</div>
@@ -86,7 +68,11 @@ const AboutUsWrapper = memo(() => {
               <div className="card">
                 <div className="content">
                   <div className="img">
-                    <img src={shreyaImg} alt="" draggable={false} />
+                    <img
+                      src={shreyaImg}
+                      alt="Shreya Shet Front-End developer"
+                      draggable={false}
+                    />
                   </div>
                   <div className="details">
                     <div className="name">Shreya Shet</div>
@@ -108,7 +94,11 @@ const AboutUsWrapper = memo(() => {
               <div className="card">
                 <div className="content">
                   <div className="img">
-                    <img src={aditiImg} alt="" draggable={false} />
+                    <img
+                      src={aditiImg}
+                      alt="Aditi Thakre Back-End developer"
+                      draggable={false}
+                    />
                   </div>
                   <div className="details">
                     <div className="name">Aditi Thakre</div>
@@ -140,7 +130,7 @@ const AboutUs = () => {
   const [loader, setLoader] = React.useState(false);
   useEffect(() => {
     setLoader(false);
-    document.title = "Tetromino";
+    document.title = "About Us | Tetromino";
     setInterval(() => {
       setLoader(true);
     }, 2000);

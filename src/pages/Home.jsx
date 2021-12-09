@@ -33,44 +33,22 @@ const HomeWrapper = () => {
         location={location}
         scrollValue={scrollValue}
       />
-      {/* <header id="header" style={{ top: scrollValue * 0.5 + "px" }}>
-        <a href="#home" className="logo">
-          tetromino
-        </a>
-        <div
-          className={toggleClick ? "toggle active" : "toggle"}
-          onClick={toggleMenuClick}
-        ></div>
-        <ul className={toggleClick ? "navigation active" : "navigation"}>
-          <li>
-            <a href="#" className="active">
-              HOME
-            </a>
-          </li>
-          <li>
-            <a href="#about-game">ABOUT GAME</a>
-          </li>
-          <li>
-            <Link to="/about-us">ABOUT US</Link>
-          </li>
-        </ul>
-      </header> */}
       <section className="images">
         <img
           src={starsImg}
-          alt=""
+          alt="Stars Img Bg"
           id="stars"
           style={{ left: scrollValue * 0.25 + "px" }}
         />
         <img
           src={moonImg}
-          alt=""
+          alt="Moon img"
           id="moon"
           style={{ top: scrollValue * 1.05 + "px" }}
         />
         <img
           src={mountainBehindImg}
-          alt=""
+          alt="Back moutains"
           id="mountains_behind"
           style={{ top: scrollValue * 0.35 + "px" }}
         />
@@ -92,7 +70,7 @@ const HomeWrapper = () => {
         </Link>
         <img
           src={mountainFrontImg}
-          alt=""
+          alt="front moutains"
           id="mountains_front"
           style={{ top: scrollValue * 0 + "px" }}
         />
