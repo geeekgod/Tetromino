@@ -26,7 +26,7 @@ const HomeWrapper = () => {
 
   return (
     <>
-      <header id="header">
+      <header id="header" style={{ top: scrollValue * 0.5 + "px" }}>
         <a href="#home" className="logo">
           tetromino
         </a>
@@ -44,7 +44,7 @@ const HomeWrapper = () => {
             <a href="#about-game">ABOUT GAME</a>
           </li>
           <li>
-            <Link to="/">ABOUT US</Link>
+            <Link to="/about-us">ABOUT US</Link>
           </li>
         </ul>
       </header>
@@ -65,7 +65,7 @@ const HomeWrapper = () => {
           src={mountainBehindImg}
           alt=""
           id="mountains_behind"
-          style={{ top: scrollValue * 0.5 + "px" }}
+          style={{ top: scrollValue * 0.35 + "px" }}
         />
         <h2
           id="text"
