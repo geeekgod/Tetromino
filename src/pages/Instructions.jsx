@@ -1,15 +1,19 @@
 import React, { memo, useEffect } from "react";
-import { useHistory } from "react-router";
+import { useHistory, useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import Loader from "../components/Loader";
 
 const InstructionsWrapper = memo(() => {
   const history = useHistory();
-    useEffect(() => {
+  const location = useLocation();
+  useEffect(() => {
+    console.log(location);
+    if (location.pathname === "/instructions") {
       setTimeout(() => {
         history.push("/play");
       }, 8500);
-    }, [history]);
+    }
+  }, [history]);
 
   return (
     <div class="top-container-instructions">
