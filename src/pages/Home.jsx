@@ -4,8 +4,9 @@ import starsImg from "../img/stars.png";
 import moonImg from "../img/moon.png";
 import mountainBehindImg from "../img/mountains_behind.png";
 import mountainFrontImg from "../img/mountains_front.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Loader from "../components/Loader";
+import Navbar from "../components/Navbar";
 
 const HomeWrapper = () => {
   const [scrollValue, setScrollValue] = useState();
@@ -23,9 +24,16 @@ const HomeWrapper = () => {
     setToggleClick(!toggleClick);
   };
 
+  const location = useLocation();
   return (
     <>
-      <header id="header" style={{ top: scrollValue * 0.5 + "px" }}>
+      <Navbar
+        toggleClick={toggleClick}
+        toggleMenuClick={toggleMenuClick}
+        location={location}
+        scrollValue={scrollValue}
+      />
+      {/* <header id="header" style={{ top: scrollValue * 0.5 + "px" }}>
         <a href="#home" className="logo">
           tetromino
         </a>
@@ -46,7 +54,7 @@ const HomeWrapper = () => {
             <Link to="/about-us">ABOUT US</Link>
           </li>
         </ul>
-      </header>
+      </header> */}
       <section className="images">
         <img
           src={starsImg}

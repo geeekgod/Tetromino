@@ -1,22 +1,35 @@
 import React, { memo, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import rishabhImg from "../img/rishabh_img.jpeg";
 import shreyaImg from "../img/shreya_img.jpeg";
 import aditiImg from "../img/aditi_img.jpeg";
 import Loader from "../components/Loader";
+import Navbar from "../components/Navbar";
 
 const AboutUsWrapper = memo(() => {
-  const [toggleClick, setToggleClick] = useState(false);
-  useEffect(() => {
-    setToggleClick(false);
-  }, []);
-
-  const toggleMenuClick = () => {
-    setToggleClick(!toggleClick);
-  };
+    const [scrollValue, setScrollValue] = useState();
+    const [toggleClick, setToggleClick] = useState(false);
+    useEffect(() => {
+      setToggleClick(false);
+      let value = 0;
+      window.addEventListener("scroll", () => {
+        value = window.scrollY;
+        setScrollValue(value);
+      });
+    }, [scrollValue]);
+  
+    const toggleMenuClick = () => {
+      setToggleClick(!toggleClick);
+    };
+  const location = useLocation();
   return (
     <div>
-      <header id="header">
+      <Navbar
+        toggleClick={toggleClick}
+        toggleMenuClick={toggleMenuClick}
+        location={location}
+      />
+      {/* <header id="header">
         <a href="#home" className="logo">
           tetromino
         </a>
@@ -37,7 +50,7 @@ const AboutUsWrapper = memo(() => {
             <Link to="/about-us">ABOUT US</Link>
           </li>
         </ul>
-      </header>
+      </header> */}
       <div className="top-container">
         <div className="container">
           <h1 className="headin">

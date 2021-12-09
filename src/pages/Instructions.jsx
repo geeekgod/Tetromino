@@ -52,7 +52,7 @@ const InstructionsWrapper = memo(() => {
               marginTop: 40,
             }}
           >
-            Skip
+            Play Now
           </Link>
         </div>
       </div>
