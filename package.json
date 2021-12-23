@@ -5,6 +5,7 @@
     "name": "Rishabh Singh",
     "email": "ris8645208@gmail.com"
   },
+  "license": "MIT",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
