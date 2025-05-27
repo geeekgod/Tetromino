@@ -31,7 +31,7 @@ export const usePlayer = () => {
       clonedPlayer.pos.x += offset;
       offset = -(offset + (offset > 0 ? 1 : -1));
       if (offset > clonedPlayer.tetromino[0].length) {
-        rotate(clonedPlayer.tetromino, -dir);
+        clonedPlayer.tetromino = rotate(clonedPlayer.tetromino, -dir);
         clonedPlayer.pos.x = pos;
         return;
       }
@@ -42,7 +42,7 @@ export const usePlayer = () => {
   const updatePlayerPos = ({ x, y, collided }) => {
     setPlayer((prev) => ({
       ...prev,
-      pos: { x: (prev.pos.x += x), y: (prev.pos.y += y) },
+      pos: { x: prev.pos.x + x, y: prev.pos.y + y },
       collided,
     }));
   };
