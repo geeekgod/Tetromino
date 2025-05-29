@@ -6,7 +6,7 @@ import aditiImg from "../img/aditi_img.jpeg";
 import Loader from "../components/Loader";
 import Navbar from "../components/Navbar";
 
-const AboutUsWrapper = memo(() => {
+const AboutUsWrapper = () => {
   const [scrollValue, setScrollValue] = useState();
   const [toggleClick, setToggleClick] = useState(false);
   useEffect(() => {
@@ -124,7 +124,7 @@ const AboutUsWrapper = memo(() => {
       </div>
     </div>
   );
-});
+};
 
 const AboutUs = () => {
   const [loader, setLoader] = React.useState(false);
@@ -139,4 +139,4 @@ const AboutUs = () => {
   return <div>{loader ? <AboutUsWrapper /> : <Loader />}</div>;
 };
 
-export default memo(AboutUs);
+export default AboutUs;

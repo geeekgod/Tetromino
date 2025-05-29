@@ -8,4 +8,4 @@ const Cell = ({ type }) => {
     )
 }
 
-export default React.memo(Cell);
+export default Cell;

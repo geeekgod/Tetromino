@@ -2,7 +2,7 @@ import React, { memo, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Loader from "../components/Loader";
 
-const InstructionsWrapper = memo(() => {
+const InstructionsWrapper = () => {
   return (
     <div className="top-container-instructions">
       <div className="container-instructions">
@@ -58,7 +58,7 @@ const InstructionsWrapper = memo(() => {
       </div>
     </div>
   );
-});
+};
 
 const Instructions = () => {
   const [loader, setLoader] = React.useState(false);
@@ -73,4 +73,4 @@ const Instructions = () => {
   return <div>{loader ? <InstructionsWrapper /> : <Loader />}</div>;
 };
 
-export default memo(Instructions);
+export default Instructions;

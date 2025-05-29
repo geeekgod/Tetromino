@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useState } from "react";
 import Stage from "./Stage";
 import Display from "./Display";
 import StartButton from "./StartButton";
@@ -87,9 +87,9 @@ const Tetris = () => {
     drop();
   }, dropTime);
 
-  const goToHome = useCallback(() => {
+  const goToHome = () => {
     history.push("/");
-  }, [history]);
+  }
 
   return (
     <div>
